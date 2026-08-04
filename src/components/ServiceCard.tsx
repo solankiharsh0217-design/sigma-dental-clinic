@@ -32,7 +32,7 @@ export default function ServiceCard({
         className="bg-white rounded-2xl shadow-sm overflow-hidden cursor-pointer group border border-navy/5 hover:shadow-premium transition-all duration-500 card-premium"
         onClick={() => setIsModalOpen(true)}
       >
-        <div className="relative h-52 overflow-hidden">
+        <div className="relative h-44 sm:h-52 overflow-hidden">
           <Image
             src={image}
             alt={title}

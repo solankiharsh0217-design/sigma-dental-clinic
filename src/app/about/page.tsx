@@ -61,10 +61,10 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-gold font-medium tracking-[0.3em] uppercase text-sm mb-4">About Us</p>
-            <h1 className="heading-editorial text-5xl sm:text-6xl lg:text-7xl text-white mb-6">
+            <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6">
               About <span className="text-gold-gradient">Sigma Dental</span>
             </h1>
-            <p className="text-white/60 max-w-2xl mx-auto text-lg">
+            <p className="text-white/60 max-w-2xl mx-auto text-base sm:text-lg">
               World-class dental care with a personal touch. Discover our story and commitment to excellence.
             </p>
           </motion.div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                   alt="Dr. Sepi Dashti"
                   width={600}
                   height={700}
-                  className="object-cover w-full h-[500px] lg:h-[600px]"
+                  className="object-cover w-full h-[300px] sm:h-[400px] lg:h-[600px]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
               </div>
@@ -105,10 +105,10 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Meet Your Dentist</p>
-              <h2 className="heading-editorial text-4xl lg:text-5xl text-navy mb-8">
+              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-navy mb-6 sm:mb-8">
                 Dr. Sepi <span className="text-gold">Dashti</span>
               </h2>
-              <p className="text-text-muted text-lg mb-6 leading-relaxed">
+              <p className="text-text-muted text-base sm:text-lg mb-6 leading-relaxed">
                 Dr. Sepi Dashti is a distinguished Chicago dentist, recognized for her expertise in
                 General and Cosmetic Dentistry. With over 18 years of hands-on experience, she is
                 known for her meticulous approach and dedication to exceptional patient care.
@@ -152,7 +152,7 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Our Values</p>
-            <h2 className="heading-editorial text-4xl lg:text-5xl text-navy mb-6">
+            <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-navy mb-6">
               What <span className="text-gold">Defines</span> Us
             </h2>
           </motion.div>
@@ -185,19 +185,19 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-navy to-navy-light rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden"
+            className="bg-gradient-to-br from-navy to-navy-light rounded-3xl p-8 sm:p-12 lg:p-20 text-center relative overflow-hidden"
           >
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(212,168,83,0.5) 1px, transparent 0)', backgroundSize: '30px 30px' }} />
             </div>
             <div className="relative z-10">
               <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Get Started</p>
-              <h2 className="heading-editorial text-4xl lg:text-5xl text-white mb-6">
+              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
                 Ready to Experience
                 <br />
                 <span className="text-gold">Premium Care?</span>
               </h2>
-              <p className="text-white/60 mb-10 max-w-2xl mx-auto text-lg">
+              <p className="text-white/60 mb-8 sm:mb-10 max-w-2xl mx-auto text-base sm:text-lg">
                 Schedule your appointment today and discover the difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

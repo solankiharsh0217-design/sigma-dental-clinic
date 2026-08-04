@@ -43,7 +43,7 @@ export default function ServiceModal({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy/80 backdrop-blur-md"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-navy/80 backdrop-blur-md"
           onClick={onClose}
         >
           <motion.div
@@ -71,7 +71,7 @@ export default function ServiceModal({
             </div>
 
             {/* Content */}
-            <div className="p-6 sm:p-8 overflow-y-auto max-h-[calc(90vh-16rem)]">
+            <div className="p-5 sm:p-6 md:p-8 overflow-y-auto max-h-[calc(90vh-16rem)]">
               <p className="text-text-muted mb-8 text-lg leading-relaxed">{description}</p>
 
               {/* Details */}

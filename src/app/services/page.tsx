@@ -346,10 +346,10 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-gold font-medium tracking-[0.3em] uppercase text-sm mb-4">Our Services</p>
-            <h1 className="heading-editorial text-5xl sm:text-6xl lg:text-7xl text-white mb-6">
+            <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6">
               Comprehensive <span className="text-gold-gradient">Dental Care</span>
             </h1>
-            <p className="text-white/60 max-w-2xl mx-auto text-lg">
+            <p className="text-white/60 max-w-2xl mx-auto text-base sm:text-lg">
               Professional dental care near you in Chicago, IL. Comprehensive solutions for the whole family.
             </p>
           </motion.div>
@@ -368,13 +368,13 @@ export default function ServicesPage() {
             >
               <div className="flex items-center gap-4 mb-2">
                 <div className="w-12 h-1 bg-gold rounded" />
-                <h2 className="heading-editorial text-3xl sm:text-4xl text-navy">
+                <h2 className="heading-editorial text-2xl sm:text-3xl md:text-4xl text-navy">
                   {category.category}
                 </h2>
               </div>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {category.items.map((service, index) => (
                 <motion.div
                   key={service.title}
@@ -400,10 +400,10 @@ export default function ServicesPage() {
             viewport={{ once: true }}
           >
             <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Questions?</p>
-            <h2 className="heading-editorial text-3xl sm:text-4xl text-navy mb-6">
+            <h2 className="heading-editorial text-2xl sm:text-3xl md:text-4xl text-navy mb-6">
               We&apos;re Here to <span className="text-gold">Help</span>
             </h2>
-            <p className="text-text-muted mb-8 text-lg max-w-xl mx-auto">
+            <p className="text-text-muted mb-8 text-base sm:text-lg max-w-xl mx-auto">
               Our team at Sigma Dental Clinic in Chicago, IL 60640 is ready to assist you.
             </p>
             <a href="tel:+17735062033" className="btn-gold inline-flex items-center gap-3">

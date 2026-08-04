@@ -136,16 +136,18 @@ export default function Home() {
   return (
     <>
       {/* Full Viewport Hero with YouTube Video Background */}
-      <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+      <section className="relative h-[60vh] sm:h-[70vh] lg:h-screen min-h-[400px] flex items-center overflow-hidden">
         {/* YouTube Video Background - Autoplay, Loop, Muted */}
         <div className="absolute inset-0 w-full h-full">
-          <iframe
-            src="https://www.youtube.com/embed/HzgVzGlWU7g?autoplay=1&mute=1&loop=1&playlist=HzgVzGlWU7g&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
-            title="Sigma Dental Clinic Tour"
-            allow="autoplay; encrypted-media"
-            className="absolute inset-0 w-full h-full scale-[1.2] pointer-events-none"
-            style={{ border: 'none' }}
-          />
+          <div className="absolute inset-0 aspect-video w-full h-full">
+            <iframe
+              src="https://www.youtube.com/embed/HzgVzGlWU7g?autoplay=1&mute=1&loop=1&playlist=HzgVzGlWU7g&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+              title="Sigma Dental Clinic Tour"
+              allow="autoplay; encrypted-media"
+              className="absolute inset-0 w-full h-full scale-[1.2] pointer-events-none"
+              style={{ border: 'none' }}
+            />
+          </div>
         </div>
 
         {/* Light overlay for text readability */}
@@ -154,7 +156,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -176,7 +178,7 @@ export default function Home() {
               </p>
 
               {/* Main Heading */}
-              <h1 className="heading-editorial text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white mb-8">
+              <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-6 sm:mb-8">
                 Where
                 <br />
                 <span className="text-gold-gradient">Beautiful</span>
@@ -185,7 +187,7 @@ export default function Home() {
               </h1>
 
               {/* Subtitle */}
-              <p className="text-xl text-white/70 mb-10 max-w-xl font-light leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 sm:mb-10 max-w-xl font-light leading-relaxed">
                 Experience world-class dentistry with Dr. Sepi Dashti. Compassionate care,
                 advanced technology, and results that transform lives.
               </p>
@@ -248,7 +250,7 @@ export default function Home() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gold/10 text-gold rounded-2xl mb-5 group-hover:bg-gold/20 transition-colors duration-300">
                   {stat.icon}
                 </div>
-                <p className="text-4xl lg:text-5xl font-bold text-white mb-2 heading-editorial">{stat.value}</p>
+                <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 heading-editorial">{stat.value}</p>
                 <p className="text-white/50 text-sm uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
@@ -273,7 +275,7 @@ export default function Home() {
                   alt="Dr. Sepi Dashti"
                   width={600}
                   height={700}
-                  className="object-cover w-full h-[500px] lg:h-[600px]"
+                  className="object-cover w-full h-[350px] sm:h-[500px] lg:h-[600px]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
               </div>
@@ -291,12 +293,12 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">About Us</p>
-              <h2 className="heading-editorial text-4xl lg:text-5xl text-navy mb-8">
+              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-navy mb-6 sm:mb-8">
                 Dental Care with a
                 <br />
                 <span className="text-gold">Personal Touch</span>
               </h2>
-              <p className="text-text-muted text-lg mb-6 leading-relaxed">
+              <p className="text-text-muted text-base sm:text-lg mb-6 leading-relaxed">
                 Welcome to Sigma Dental Clinic! We provide exceptional dental care in the heart of
                 Uptown, Andersonville, Bowmanville, and Lincoln Square, Chicago, IL. Our experienced
                 team is dedicated to comprehensive oral health.
@@ -343,16 +345,16 @@ export default function Home() {
             className="text-center mb-16"
           >
             <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">What We Offer</p>
-            <h2 className="heading-editorial text-4xl lg:text-5xl text-navy mb-6">
+            <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-navy mb-6">
               Our <span className="text-gold">Services</span>
             </h2>
-            <p className="text-text-muted max-w-2xl mx-auto text-lg">
+            <p className="text-text-muted max-w-2xl mx-auto text-base sm:text-lg">
               Comprehensive dental care for the whole family. From routine check-ups to advanced
               treatments, we offer everything you need for a healthy, beautiful smile.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -405,15 +407,15 @@ export default function Home() {
             className="text-center mb-16"
           >
             <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Testimonials</p>
-            <h2 className="heading-editorial text-4xl lg:text-5xl text-white mb-6">
+            <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               What Our Patients <span className="text-gold">Say</span>
             </h2>
-            <p className="text-white/50 max-w-xl mx-auto text-lg">
+            <p className="text-white/50 max-w-xl mx-auto text-base sm:text-lg">
               Why Patients Love Dr. Sepi at Sigma Dental Clinic
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
@@ -463,14 +465,14 @@ export default function Home() {
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(212,168,83,0.5) 1px, transparent 0)', backgroundSize: '30px 30px' }} />
             </div>
-            <div className="relative z-10 p-12 lg:p-20 text-center">
+            <div className="relative z-10 p-8 sm:p-12 lg:p-20 text-center">
               <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Get Started</p>
-              <h2 className="heading-editorial text-4xl lg:text-5xl text-white mb-6">
+              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
                 Ready to Transform
                 <br />
                 <span className="text-gold">Your Smile?</span>
               </h2>
-              <p className="text-white/60 mb-10 max-w-2xl mx-auto text-lg">
+              <p className="text-white/60 mb-8 sm:mb-10 max-w-2xl mx-auto text-base sm:text-lg">
                 Schedule your appointment today and experience the difference of expert care
                 delivered with genuine compassion.
               </p>
@@ -506,7 +508,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Visit Us</p>
-              <h2 className="heading-editorial text-4xl lg:text-5xl text-navy mb-8">
+              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-navy mb-6 sm:mb-8">
                 Conveniently Located
                 <br />
                 in <span className="text-gold">Chicago</span>
@@ -553,7 +555,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="rounded-2xl overflow-hidden shadow-premium h-[450px]"
+              className="rounded-2xl overflow-hidden shadow-premium h-[300px] sm:h-[350px] lg:h-[450px]"
             >
               <iframe
                 src="https://maps.google.com/maps?q=Sigma%20Dental%20Clinic%201954%20W%20Foster%20Ave%2C%20Chicago%2C%20IL%2060640%2C%20United%20States&t=m&z=15&output=embed&iwloc=near"

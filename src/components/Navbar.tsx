@@ -51,7 +51,7 @@ export default function Navbar() {
             alt="Sigma Dental Clinic"
             width={280}
             height={80}
-            className="h-12 lg:h-16 w-auto"
+            className="h-10 sm:h-12 lg:h-16 w-auto"
             priority
           />
         </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
         </nav>
 
         {/* CTA + Phone + Hamburger - Far right */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a

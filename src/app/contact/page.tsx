@@ -43,10 +43,10 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-gold font-medium tracking-[0.3em] uppercase text-sm mb-4">Contact Us</p>
-            <h1 className="heading-editorial text-5xl sm:text-6xl lg:text-7xl text-white mb-6">
+            <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6">
               Get in <span className="text-gold-gradient">Touch</span>
             </h1>
-            <p className="text-white/60 max-w-2xl mx-auto text-lg">
+            <p className="text-white/60 max-w-2xl mx-auto text-base sm:text-lg">
               We&apos;d love to hear from you. Fill out the form and we&apos;ll get back to you shortly.
             </p>
           </motion.div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-white p-8 lg:p-10 rounded-3xl shadow-sm border border-navy/5"
+              className="bg-white p-6 sm:p-8 lg:p-10 rounded-3xl shadow-sm border border-navy/5"
             >
               <h2 className="heading-editorial text-2xl text-navy mb-8">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -216,7 +216,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl overflow-hidden shadow-premium h-72">
+              <div className="rounded-2xl overflow-hidden shadow-premium h-64 sm:h-72">
                 <iframe
                   src="https://maps.google.com/maps?q=Sigma%20Dental%20Clinic%201954%20W%20Foster%20Ave%2C%20Chicago%2C%20IL%2060640%2C%20United%20States&t=m&z=15&output=embed&iwloc=near"
                   width="100%"

@@ -77,10 +77,10 @@ export default function ReviewsPage() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-gold font-medium tracking-[0.3em] uppercase text-sm mb-4">Patient Reviews</p>
-            <h1 className="heading-editorial text-5xl sm:text-6xl lg:text-7xl text-white mb-6">
+            <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6">
               What Our Patients <span className="text-gold-gradient">Say</span>
             </h1>
-            <p className="text-white/60 max-w-2xl mx-auto text-lg">
+            <p className="text-white/60 max-w-2xl mx-auto text-base sm:text-lg">
               See what our patients are saying about their experience at Sigma Dental Clinic in Chicago, IL.
             </p>
           </motion.div>
@@ -90,7 +90,7 @@ export default function ReviewsPage() {
       {/* Reviews Grid */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
@@ -131,19 +131,19 @@ export default function ReviewsPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-navy to-navy-light rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden"
+            className="bg-gradient-to-br from-navy to-navy-light rounded-3xl p-8 sm:p-12 lg:p-20 text-center relative overflow-hidden"
           >
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(212,168,83,0.5) 1px, transparent 0)', backgroundSize: '30px 30px' }} />
             </div>
             <div className="relative z-10">
               <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Join Our Patients</p>
-              <h2 className="heading-editorial text-4xl lg:text-5xl text-white mb-6">
+              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
                 Experience Our
                 <br />
                 <span className="text-gold">Dental Care</span>
               </h2>
-              <p className="text-white/60 mb-10 max-w-2xl mx-auto text-lg">
+              <p className="text-white/60 mb-8 sm:mb-10 max-w-2xl mx-auto text-base sm:text-lg">
                 Join our satisfied patients and discover why we&apos;re Chicago&apos;s most trusted dental clinic.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
