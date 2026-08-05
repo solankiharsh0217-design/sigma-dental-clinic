@@ -23,7 +23,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-24 bg-navy overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-navy overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/services/modern-clinic.jpg"
@@ -42,11 +42,11 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-gold font-medium tracking-[0.3em] uppercase text-sm mb-4">Contact Us</p>
-            <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6">
+            <p className="text-gold font-medium tracking-[0.2em] sm:tracking-[0.3em] uppercase text-xs sm:text-sm mb-4">Contact Us</p>
+            <h1 className="heading-editorial text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-6">
               Get in <span className="text-gold-gradient">Touch</span>
             </h1>
-            <p className="text-white/60 max-w-2xl mx-auto text-base sm:text-lg">
+            <p className="text-white/60 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg">
               We&apos;d love to hear from you. Fill out the form and we&apos;ll get back to you shortly.
             </p>
           </motion.div>
@@ -54,9 +54,9 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24">
+      <section className="py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -159,44 +159,44 @@ export default function ContactPage() {
               className="space-y-8"
             >
               <div>
-                <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Our Location</p>
-                <h2 className="heading-editorial text-3xl text-navy mb-8">Find Us</h2>
-                <div className="space-y-4">
+                <p className="text-gold font-medium tracking-[0.2em] sm:tracking-[0.25em] uppercase text-xs sm:text-sm mb-4">Our Location</p>
+                <h2 className="heading-editorial text-2xl sm:text-3xl text-navy mb-6 sm:mb-8">Find Us</h2>
+                <div className="space-y-3 sm:space-y-4">
                   <a
                     href="https://maps.google.com/?q=1954+W+Foster+Ave+Chicago+IL+60640"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-navy/5 hover:shadow-premium hover:border-gold/20 transition-all duration-300 group"
+                    className="flex items-start gap-3 sm:gap-4 p-4 sm:p-5 bg-white rounded-2xl border border-navy/5 hover:shadow-premium hover:border-gold/20 transition-all duration-300 group"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-navy flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors duration-300">
-                      <MapPin className="w-5 h-5 text-gold group-hover:text-navy transition-colors" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-navy flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors duration-300">
+                      <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-gold group-hover:text-navy transition-colors" />
                     </div>
                     <div>
-                      <p className="font-bold text-navy mb-1">Address</p>
-                      <p className="text-text-muted">1954 W Foster Ave, Chicago, IL 60640</p>
+                      <p className="font-bold text-navy mb-1 text-sm sm:text-base">Address</p>
+                      <p className="text-text-muted text-xs sm:text-sm">1954 W Foster Ave, Chicago, IL 60640</p>
                     </div>
                   </a>
                   <a
                     href="tel:+17735062033"
-                    className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-navy/5 hover:shadow-premium hover:border-gold/20 transition-all duration-300 group"
+                    className="flex items-start gap-3 sm:gap-4 p-4 sm:p-5 bg-white rounded-2xl border border-navy/5 hover:shadow-premium hover:border-gold/20 transition-all duration-300 group"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-navy flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors duration-300">
-                      <Phone className="w-5 h-5 text-gold group-hover:text-navy transition-colors" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-navy flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors duration-300">
+                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-gold group-hover:text-navy transition-colors" />
                     </div>
                     <div>
-                      <p className="font-bold text-navy mb-1">Phone</p>
-                      <p className="text-text-muted">(773) 506-2033 | (773) 754-0005</p>
+                      <p className="font-bold text-navy mb-1 text-sm sm:text-base">Phone</p>
+                      <p className="text-text-muted text-xs sm:text-sm">(773) 506-2033 | (773) 754-0005</p>
                     </div>
                   </a>
                   <a
                     href="mailto:Info@sigmadentalclinic.com"
-                    className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-navy/5 hover:shadow-premium hover:border-gold/20 transition-all duration-300 group"
+                    className="flex items-start gap-3 sm:gap-4 p-4 sm:p-5 bg-white rounded-2xl border border-navy/5 hover:shadow-premium hover:border-gold/20 transition-all duration-300 group"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-navy flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors duration-300">
-                      <Mail className="w-5 h-5 text-gold group-hover:text-navy transition-colors" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-navy flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors duration-300">
+                      <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-gold group-hover:text-navy transition-colors" />
                     </div>
                     <div>
-                      <p className="font-bold text-navy mb-1">Email</p>
+                      <p className="font-bold text-navy mb-1 text-sm sm:text-base">Email</p>
                       <p className="text-text-muted">Info@sigmadentalclinic.com</p>
                     </div>
                   </a>

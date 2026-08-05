@@ -136,27 +136,26 @@ export default function Home() {
   return (
     <>
       {/* Full Viewport Hero with YouTube Video Background */}
-      <section className="relative h-[60vh] sm:h-[70vh] lg:h-screen min-h-[400px] flex items-center overflow-hidden">
+      <section className="relative h-[70vh] sm:h-[80vh] lg:h-screen min-h-[500px] flex items-center overflow-hidden bg-navy">
         {/* YouTube Video Background - Autoplay, Loop, Muted */}
-        <div className="absolute inset-0 w-full h-full">
-          <div className="absolute inset-0 aspect-video w-full h-full">
-            <iframe
-              src="https://www.youtube.com/embed/HzgVzGlWU7g?autoplay=1&mute=1&loop=1&playlist=HzgVzGlWU7g&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
-              title="Sigma Dental Clinic Tour"
-              allow="autoplay; encrypted-media"
-              className="absolute inset-0 w-full h-full scale-[1.2] pointer-events-none"
-              style={{ border: 'none' }}
-            />
-          </div>
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <iframe
+            src="https://www.youtube.com/embed/HzgVzGlWU7g?autoplay=1&mute=1&loop=1&playlist=HzgVzGlWU7g&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&iv_load_policy=3&autohide=1"
+            title="Sigma Dental Clinic Tour"
+            allow="autoplay; encrypted-media"
+            className="absolute top-1/2 left-1/2 min-w-[150%] min-h-[150%] w-auto h-auto -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            style={{ border: 'none' }}
+          />
         </div>
 
-        {/* Light overlay for text readability */}
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/60 via-navy/20 to-transparent" />
+        {/* Overlays for text readability */}
+        <div className="absolute inset-0 bg-navy/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-transparent" />
 
         {/* Content */}
         <div className="relative z-10 w-full">
-          <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -167,18 +166,18 @@ export default function Home() {
               {/* Gold accent line */}
               <motion.div
                 initial={{ width: 0 }}
-                animate={{ width: 80 }}
+                animate={{ width: 60 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="h-1 bg-gradient-to-r from-gold to-gold-light mb-8"
+                className="h-1 bg-gradient-to-r from-gold to-gold-light mb-6 sm:mb-8"
               />
 
               {/* Tagline */}
-              <p className="text-gold font-medium tracking-[0.3em] uppercase text-sm mb-6">
+              <p className="text-gold font-medium tracking-[0.2em] sm:tracking-[0.3em] uppercase text-xs sm:text-sm mb-4 sm:mb-6">
                 Premium Dental Care in Chicago
               </p>
 
               {/* Main Heading */}
-              <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-6 sm:mb-8">
+              <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-6 sm:mb-8 leading-[1.05]">
                 Where
                 <br />
                 <span className="text-gold-gradient">Beautiful</span>
@@ -193,19 +192,19 @@ export default function Home() {
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
                   href="/contact"
-                  className="btn-gold inline-flex items-center justify-center gap-3 text-base"
+                  className="btn-gold inline-flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base"
                 >
-                  <Calendar className="w-5 h-5" />
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                   Book Your Consultation
                 </Link>
                 <a
                   href="tel:+17735062033"
-                  className="btn-outline-gold inline-flex items-center justify-center gap-3 text-base"
+                  className="btn-outline-gold inline-flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                   (773) 506-2033
                 </a>
               </div>
@@ -232,12 +231,12 @@ export default function Home() {
       </section>
 
       {/* Stats Section - Premium dark */}
-      <section className="py-20 bg-navy relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(212,168,83,0.3) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -247,11 +246,11 @@ export default function Home() {
                 transition={{ delay: index * 0.15, duration: 0.6 }}
                 className="text-center group"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gold/10 text-gold rounded-2xl mb-5 group-hover:bg-gold/20 transition-colors duration-300">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gold/10 text-gold rounded-xl sm:rounded-2xl mb-3 sm:mb-5 group-hover:bg-gold/20 transition-colors duration-300">
                   {stat.icon}
                 </div>
-                <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 heading-editorial">{stat.value}</p>
-                <p className="text-white/50 text-sm uppercase tracking-wider">{stat.label}</p>
+                <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-2 heading-editorial">{stat.value}</p>
+                <p className="text-white/50 text-xs sm:text-sm uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -259,9 +258,9 @@ export default function Home() {
       </section>
 
       {/* About Section - Editorial split */}
-      <section className="py-24 bg-background">
+      <section className="py-16 sm:py-20 lg:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -280,9 +279,9 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
               </div>
               {/* Floating badge */}
-              <div className="absolute -bottom-8 -right-4 lg:-right-8 bg-navy text-white p-6 rounded-2xl shadow-premium border border-gold/20">
-                <p className="text-4xl font-bold text-gold heading-editorial">18+</p>
-                <p className="text-white/70 text-sm uppercase tracking-wider">Years of Excellence</p>
+              <div className="absolute -bottom-4 sm:-bottom-8 -right-2 lg:-right-8 bg-navy text-white p-4 sm:p-6 rounded-xl sm:rounded-2xl shadow-premium border border-gold/20">
+                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gold heading-editorial">18+</p>
+                <p className="text-white/70 text-xs sm:text-sm uppercase tracking-wider">Years of Excellence</p>
               </div>
             </motion.div>
 
@@ -293,7 +292,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">About Us</p>
-              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-navy mb-6 sm:mb-8">
+              <h2 className="heading-editorial text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-navy mb-6 sm:mb-8">
                 Dental Care with a
                 <br />
                 <span className="text-gold">Personal Touch</span>
@@ -336,7 +335,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Services Section */}
-      <section className="py-24 bg-background-alt">
+      <section className="py-16 sm:py-20 lg:py-24 bg-background-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -386,7 +385,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Premium */}
-      <section className="py-24 bg-navy relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-24 bg-navy relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/other/patient-satisfaction.webp"
@@ -423,7 +422,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.6 }}
-                className="bg-navy-light/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-gold/20 transition-all duration-300"
+                className="bg-navy-light/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-gold/20 transition-all duration-300"
               >
                 <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -447,7 +446,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Premium */}
-      <section className="py-24 bg-background relative">
+      <section className="py-16 sm:py-20 lg:py-24 bg-background relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -465,7 +464,7 @@ export default function Home() {
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(212,168,83,0.5) 1px, transparent 0)', backgroundSize: '30px 30px' }} />
             </div>
-            <div className="relative z-10 p-8 sm:p-12 lg:p-20 text-center">
+            <div className="relative z-10 p-6 sm:p-10 lg:p-16 xl:p-20 text-center">
               <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Get Started</p>
               <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
                 Ready to Transform
@@ -498,9 +497,9 @@ export default function Home() {
       </section>
 
       {/* Location Section */}
-      <section className="py-24 bg-background-alt">
+      <section className="py-16 sm:py-20 lg:py-24 bg-background-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -508,7 +507,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Visit Us</p>
-              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl text-navy mb-6 sm:mb-8">
+              <h2 className="heading-editorial text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-navy mb-6 sm:mb-8">
                 Conveniently Located
                 <br />
                 in <span className="text-gold">Chicago</span>

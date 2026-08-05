@@ -326,7 +326,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-24 bg-navy overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-navy overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/hero/dental-clinic-interior.jpg"
@@ -345,11 +345,11 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-gold font-medium tracking-[0.3em] uppercase text-sm mb-4">Our Services</p>
-            <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6">
+            <p className="text-gold font-medium tracking-[0.2em] sm:tracking-[0.3em] uppercase text-xs sm:text-sm mb-4">Our Services</p>
+            <h1 className="heading-editorial text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-6">
               Comprehensive <span className="text-gold-gradient">Dental Care</span>
             </h1>
-            <p className="text-white/60 max-w-2xl mx-auto text-base sm:text-lg">
+            <p className="text-white/60 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg">
               Professional dental care near you in Chicago, IL. Comprehensive solutions for the whole family.
             </p>
           </motion.div>
@@ -358,7 +358,7 @@ export default function ServicesPage() {
 
       {/* Services */}
       {services.map((category) => (
-        <section key={category.id} id={category.id} className="py-20">
+        <section key={category.id} id={category.id} className="py-12 sm:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -392,21 +392,21 @@ export default function ServicesPage() {
       ))}
 
       {/* CTA */}
-      <section className="py-24 bg-background-alt">
+      <section className="py-16 sm:py-20 lg:py-24 bg-background-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Questions?</p>
+            <p className="text-gold font-medium tracking-[0.2em] sm:tracking-[0.25em] uppercase text-xs sm:text-sm mb-4">Questions?</p>
             <h2 className="heading-editorial text-2xl sm:text-3xl md:text-4xl text-navy mb-6">
               We&apos;re Here to <span className="text-gold">Help</span>
             </h2>
-            <p className="text-text-muted mb-8 text-base sm:text-lg max-w-xl mx-auto">
+            <p className="text-text-muted mb-8 text-sm sm:text-base lg:text-lg max-w-xl mx-auto">
               Our team at Sigma Dental Clinic in Chicago, IL 60640 is ready to assist you.
             </p>
-            <a href="tel:+17735062033" className="btn-gold inline-flex items-center gap-3">
+            <a href="tel:+17735062033" className="btn-gold inline-flex items-center gap-2 sm:gap-3">
               Call (773) 506-2033
             </a>
           </motion.div>

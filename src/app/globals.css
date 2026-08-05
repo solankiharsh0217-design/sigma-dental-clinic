@@ -48,13 +48,21 @@ html {
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
   color: var(--navy);
   font-weight: 700;
-  padding: 0.875rem 2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   letter-spacing: 0.025em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 15px rgba(212, 168, 83, 0.3);
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .btn-gold {
+    padding: 0.875rem 2rem;
+    font-size: 0.875rem;
+  }
 }
 
 .btn-gold:hover {
@@ -67,13 +75,21 @@ html {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   color: white;
   font-weight: 700;
-  padding: 0.875rem 2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   letter-spacing: 0.025em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 15px rgba(10, 22, 40, 0.3);
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .btn-navy {
+    padding: 0.875rem 2rem;
+    font-size: 0.875rem;
+  }
 }
 
 .btn-navy:hover {
@@ -86,12 +102,20 @@ html {
   border: 2px solid var(--gold);
   color: var(--gold);
   font-weight: 700;
-  padding: 0.75rem 2rem;
+  padding: 0.625rem 1.5rem;
   border-radius: 0.5rem;
   letter-spacing: 0.025em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .btn-outline-gold {
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+  }
 }
 
 .btn-outline-gold:hover {
